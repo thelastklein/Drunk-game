@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { CardContainer, Container } from './card.style'
 
 
 let deck = [
@@ -23,11 +24,13 @@ export function Card() {
     let [card, setCard] = useState(0)
 
     return (
-        <div>
-            <div><h1>{deck[card]}</h1></div>
+        <Container>
+            <CardContainer>
+                <h1>{deck[card]}</h1>
+            </CardContainer>
 
             <button type="button" onClick={generateRandomCard}>Pegar outra carta</button>
-        </div>
+        </Container>
     )
 
     function removeCard(){
