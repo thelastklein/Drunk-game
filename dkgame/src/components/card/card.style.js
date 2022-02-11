@@ -4,19 +4,19 @@ import styled from "styled-components"
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: navy;
+    background-color: #00b4d8;
     height: 100vh;
 
     button {
             margin-top: 20px;
             color: beige;
-            background-color: teal;
-            width: 150px;
-            height: 50px;
+            background-color: #0077b6;
+            width: 250px;
+            height: 60px;
             border-radius: 10px;
-            border: none;
-            font-family: arial;
-            font-size: 15px;
+            border: solid white;
+            font-family: Sofia, sans-serif;
+            font-size: 20px;
 
             &:hover {
               filter: brightness(0.8);  
@@ -27,18 +27,20 @@ import styled from "styled-components"
 `
 
 export const CardContainer = styled.div`
-    background-color: teal;
-    height: 300px;
+    background-color: #0077b6;
+    height: 400px;
     width: 250px;
-    margin-top: 100px;
+    margin-top: 60px;
     padding: 10px;
+    border: solid white;
     border-radius: 10px;
     
     
     h1 {
     text-align: center;
     color: beige;
-    margin-top: 30px;
+    margin-top: 50px;
+    font-family: Sofia, sans-serif;
     
 }
        
