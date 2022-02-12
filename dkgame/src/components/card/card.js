@@ -1,5 +1,6 @@
 import {useState} from 'react'
-import { CardContainer, Container } from './card.style'
+import { CardContainer, Container, BackCardContainer } from './card.style'
+import ReactCardFlip from 'react-card-flip'
 
 
 let deck = [
@@ -30,29 +31,36 @@ let max = 17
 
 export function Card() {
     let [card, setCard] = useState(0)
+    const [isFlipped, setIsFlipped] = useState(false)
+
 
     return (
         <Container>
-            <CardContainer>
-                <h1>{deck[card]}</h1>
-            </CardContainer>
+            
+            <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal" flipSpeedFrontToBack="1.5" flipSpeedBackToFront="1.5">
+                <CardContainer>
+                    <h1>{deck[card]}</h1>
+                    
+                </CardContainer>
 
-            <button type="button" onClick={generateRandomCard}>Pegar outra carta</button>
+                <BackCardContainer>
+                    <h1>{deck[card]}</h1>
+                </BackCardContainer>
+
+            </ReactCardFlip> 
+            <button type="button" onClick={handleClick}>Pegar outra carta</button>           
         </Container>
     )
 
-    /*function removeCard(){
-        let removed = deck.splice(card, 1);
-        max = deck.length
-
-        console.log(max,removed, deck[card])
-    }*/
+    function handleClick() {
+        setIsFlipped(!isFlipped)
+        setTimeout(function() {generateRandomCard();},500)
+        
+    }
 
     function generateRandomCard(){
         setCard(card = Math.floor(Math.random() * (max - 1 + 1) + 1 ))
-
-        //setTimeout( function() { removeCard(); }, 1000);
-
+        
     }
 }
 
