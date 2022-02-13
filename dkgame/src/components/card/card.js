@@ -21,11 +21,14 @@ let deck = [
     'Todos falam o nome de uma bebida alcoólica, até alguem travar ou não souber, essa pessoa bebe',
     'Solteiros bebem',
     'Quem estiver em um relacionamento bebe',
-    'Quem fez sexo nas ultimas 24hrs bebe'
+    'Quem fez sexo nas ultimas 24hrs bebe',
+    'A última pessoa que foi ao banheiro bebe',
+    'Que dormiu sozinho nas últimas 72 horas bebe',
+    'jogue uma moeda, se der cara, você bebe, se der coroa, todos os outros bebem',
 
 ]
 
-let max = 17
+let max = 20
 
 
 
@@ -55,6 +58,8 @@ export function Card() {
     function handleClick() {
         setIsFlipped(!isFlipped)
         setTimeout(function() {generateRandomCard();},500)
+
+        console.log(card)
         
     }
 
