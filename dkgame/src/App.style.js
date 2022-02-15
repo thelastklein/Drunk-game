@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const BodyContainer = styled.div`
-    background-color: #00b4d8;
+    background-color: beige;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -16,13 +16,15 @@ export const Container = styled.div`
     align-items: center;
     width: 360px;
     height: 400px;
-    margin-top: 30px;
+    margin-top: 200px;
     background-color: beige;
 
 
 `
 export const GameButton1 = styled.button`
-    width: 190px;
+    display:flex;
+    justify-content: center;
+    width: 300px;
     height: 50px;
     margin-top: 20px;
     background-color: #0077b6;
@@ -34,18 +36,39 @@ export const GameButton1 = styled.button`
             text-decoration: none;
             color: beige;
             font-size: 20px;
+            margin-top: 10px
+        }
+
+        .cerveja {
+            width: 50px;
+            
         }
 
 `
 
 export const GameButton2 = styled.button`
-    width: 190px;
+    display:flex;
+    justify-content: center;
+    width: 300px;
     height: 50px;
     margin-top: 20px;
-    background-color: #0077b6;
+    background-color: #a70000;
     border-radius: 20px;
     border: none;
     color: beige;
+
+    a {
+        text-decoration: none;
+        color: beige;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .fogo {
+            width: 50px;
+            height: 40px;
+            margin-top: 3px;
+        }
 
 `
 
