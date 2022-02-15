@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { CardContainer, Container, BackCardContainer } from './card.style'
+import { CardContainer, Container, BackCardContainer } from './cardGame1.style'
 import ReactCardFlip from 'react-card-flip'
 
 
@@ -24,7 +24,7 @@ let deck = [
     'Quem fez sexo nas ultimas 24hrs bebe',
     'A última pessoa que foi ao banheiro bebe',
     'Que dormiu sozinho nas últimas 72 horas bebe',
-    'jogue uma moeda, se der cara, você bebe, se der coroa, todos os outros bebem',
+    'Jogue uma moeda, se der cara, você bebe, se der coroa, todos os outros bebem',
 
 ]
 
@@ -32,7 +32,7 @@ let max = 20
 
 
 
-export function Card() {
+export function CardGame1() {
     let [card, setCard] = useState(0)
     const [isFlipped, setIsFlipped] = useState(false)
 
